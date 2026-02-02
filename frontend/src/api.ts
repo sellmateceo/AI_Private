@@ -32,6 +32,16 @@ export type Sale = {
   note?: string | null;
 };
 
+export type Settlement = {
+  id: number;
+  host_id: number;
+  period_start: string;
+  period_end: string;
+  total_sales?: number | string | null;
+  total_payout?: number | string | null;
+  status?: string | null;
+};
+
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:8000/api";
 
 const request = async <T>(path: string, options?: RequestInit): Promise<T> => {
@@ -75,6 +85,13 @@ export const createAttendance = (payload: Omit<Attendance, "id">) =>
 export const listSales = () => request<Sale[]>("/sales");
 export const createSale = (payload: Omit<Sale, "id">) =>
   request<Sale>("/sales", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+
+export const listSettlements = () => request<Settlement[]>("/settlements");
+export const createSettlement = (payload: Omit<Settlement, "id">) =>
+  request<Settlement>("/settlements", {
     method: "POST",
     body: JSON.stringify(payload),
   });

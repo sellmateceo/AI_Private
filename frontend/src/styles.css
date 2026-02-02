@@ -81,6 +81,15 @@ input {
   padding: 10px 12px;
 }
 
+select {
+  flex: 1;
+  min-width: 160px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  background: #ffffff;
+}
+
 button {
   border: none;
   border-radius: 10px;
@@ -92,6 +101,11 @@ button {
 
 button:hover {
   background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .list {
