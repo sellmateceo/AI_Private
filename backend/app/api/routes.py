@@ -57,7 +57,7 @@ def login(
     return {
         "access_token": token,
         "token_type": "bearer",
-        "user": UserOut.model_validate(user),
+        "user": UserOut.model_validate(user).model_dump(),
         "issued_at": datetime.utcnow().isoformat(),
     }
 
