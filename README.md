@@ -12,6 +12,11 @@ docker compose up --build
 - Backend: http://localhost:8000/api
 - MySQL: localhost:3306 (user: app / password: app, db: host_management)
 
+## Login
+Initial admin account (set in backend/app/core/config.py):
+- Username: admin
+- Password: admin123
+
 ## Local Development (Optional)
 ### Backend
 ```bash

@@ -25,6 +25,8 @@ body {
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .header h1 {
@@ -34,6 +36,7 @@ body {
 .summary {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .summary div {
@@ -134,6 +137,13 @@ button:disabled {
 .actions {
   display: flex;
   gap: 8px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .empty {
